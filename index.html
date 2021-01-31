@@ -3,13 +3,39 @@
     <head>
         <title>WEB - html</title>
         <meta charset="utf-8">
+        <!--
+            style에서 앞에 .이 붙으면 class 선택자, #이 붙으면 id 선택자
+            id 선택자(#) > class 선택자(.) > 태그 선택자 순으로 우선순위가 있음. 
+            같은 선택자는 밑에 있는게(나중에 쓴게) 우선순위가 높음.
+
+            id는 중복되서는 안된다.
+            class는 같은 종류의 여러개를 그룹으로 묶을 수 있다.
+            >> id가 우선순위가 높은 이유. > 더 구체적인 정보가 우선되어야 한다. 
+        -->
+        <style>
+          a {
+              color:black;
+              
+          }
+          h1 {
+              font-size:45px;
+              text-align:center;
+          }
+          #active{
+              color:red;
+          }
+          .saw { 
+              color:gray;
+          }
+        </style>
+
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
         <p>
         <ol>
-            <li><a href="html.html">HTML</a></li>
-            <li><a href="css.html">CSS</a></li>
+            <li><a href="html.html" class="saw">HTML</a></li>
+            <li><a href="css.html" class="saw" id="active">CSS</a></li>
             <li><a href="JavaScript.html">JavaScript</a></li>
         </ol>
         </p>
