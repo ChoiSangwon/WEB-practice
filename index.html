@@ -13,45 +13,69 @@
             >> id가 우선순위가 높은 이유. > 더 구체적인 정보가 우선되어야 한다. 
         -->
         <style>
-          a {
-              color:black;
-              
-          }
-          h1 {
-              font-size:45px;
-              text-align:center;
-          }
-          #active{
-              color:red;
-          }
-          .saw { 
-              color:gray;
+            body {
+                margin:0;
+            }
+            h1 {
+                font-size: 40px;
+                text-align: center;
+                border-bottom:1px solid gray;
+                margin:0;
+                padding:20;
+            }
+            a {
+                color:black;
+                text-decoration:none;
+            }
+            #aaa {
+                display:grid;
+                grid-template-columns: 170px 1fr;
+            }
+            #aaa ol {
+                border-right:1px solid gray;
+                width:100px;
+                margin:0;
+                padding :20px;
+                padding-left:33px;
+            }
+            @media(max-width:800px){
+              #aaa {
+                display:block;
+              }
+              #aaa ol {
+                  border-right:none;
+              }
+              h1 {
+                  border-bottom: none;
+              }
           }
         </style>
 
     </head>
     <body>
         <h1><a href="index.html">WEB</a></h1>
-        <p>
+        <div id="aaa">
         <ol>
             <li><a href="html.html" class="saw">HTML</a></li>
             <li><a href="css.html" class="saw" id="active">CSS</a></li>
             <li><a href="JavaScript.html">JavaScript</a></li>
         </ol>
-        </p>
-        <h3>WEB</h3>
-        <p>
-                The World Wide Web (abbreviated WWW or the Web) is 
-                an information space where documents and other web 
-                resources are identified by Uniform Resource Locators 
-                (URLs), interlinked by hypertext links, and can be 
-                accessed via the Internet.[1] English scientist Tim 
-                Berners-Lee invented the World Wide Web in 1989. 
-                He wrote the first web browser computer program in 
-                1990 while employed at CERN in Switzerland.[2][3] 
-                The Web browser was released outside of CERN in 1991, 
-                first to other research institutions starting in January 
-                1991 and to the general public on the Internet in August 1991.
-        </p>
+        <div>
+          <h3>WEB</h3>
+          <p>
+              The World Wide Web (abbreviated WWW or the Web) is 
+              an information space where documents and other web 
+              resources are identified by Uniform Resource Locators 
+              (URLs), interlinked by hypertext links, and can be 
+              accessed via the Internet.[1] English scientist Tim 
+              Berners-Lee invented the World Wide Web in 1989. 
+              He wrote the first web browser computer program in 
+              1990 while employed at CERN in Switzerland.[2][3] 
+              The Web browser was released outside of CERN in 1991, 
+              first to other research institutions starting in January 
+              1991 and to the general public on the Internet in August 1991.
+          </p>
+        </div>
+        </div>
     </body>
 </html>
