@@ -8,6 +8,7 @@
 
     <body style="background-color: black; color:white">
         <h1><a href="index.html">WEB</a></h1>
+        <!--
         <input type="button" value="night" onclick="
           document.querySelector('body').style.backgroundColor = 'black';
           document.querySelector('body').style.color = 'white';
@@ -16,6 +17,21 @@
           document.querySelector('body').style.backgroundColor = 'white';
           document.querySelector('body').style.color = 'black';
         ">
+        -->
+        <input id="night_day" type="button" value="night" onclick="
+          if(this.value==='night'){
+            var target = document.querySelector('body')
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value='day';
+          } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value='night'
+          }
+          
+        ">
+
         <div id="aaa">
           <ol>
             <li><a href="html.html">HTML</a></li>
