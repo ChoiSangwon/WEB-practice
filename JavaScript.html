@@ -4,6 +4,31 @@
       <title>WEB - JavaScript</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="style.css">
+      <script>
+        function back_color(a){
+          var target = document.querySelector('body');
+          if(a.value==='night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            a.value='day';
+            
+            var link_a = document.querySelectorAll('a');
+            for(var i=0;i<link_a.length;i++){
+              link_a[i].style.color = 'blue';
+            }
+
+          } else {
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            a.value='night'
+            
+            var link_a = document.querySelectorAll('a');
+            for(var i=0;i<link_a.length;i++){
+              link_a[i].style.color = 'red';
+            }
+          }
+        }
+      </script>
     </head>
 
     <body style="background-color: black; color:white">
@@ -19,17 +44,8 @@
         ">
         -->
         <input id="night_day" type="button" value="night" onclick="
-          if(this.value==='night'){
-            var target = document.querySelector('body')
-            target.style.backgroundColor = 'black';
-            target.style.color = 'white';
-            this.value='day';
-          } else {
-            target.style.backgroundColor = 'white';
-            target.style.color = 'black';
-            this.value='night'
-          }
-          
+          var target = document.querySelector('body');
+          back_color(this);
         ">
 
         <div id="aaa">
